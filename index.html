@@ -4,9 +4,303 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="skull.svg" />
 		<title>What mods does MagicalEye use? 💀</title>
+		<style>
+			@font-face {
+				font-family: Whitney;
+				src: url(whitneymedium.otf);
+			}
+			@font-face {
+				font-family: IsaacGame;
+				src: url(IsaacGame.ttf);
+			}
+			body {
+				/* background-color: rgb(250, 250, 240); */
+				background-color: #37393e;
+				text-align: center;
+
+				margin: 10px;
+				margin-top: 24px;
+				font-family: sans-serif;
+			}
+			#magicaleyes {
+				margin: auto;
+				margin-top: 16px;
+
+				color: white;
+				background-color: inherit;
+				width: 212px;
+				height: 32px;
+				border-radius: 4px;
+
+				text-align: start;
+				padding-left: 8px;
+
+				display: flex;
+
+				cursor: pointer;
+			}
+			#magicaleyes:hover {
+				background-color: #3c3f44;
+			}
+			#magicaleyes.active {
+				background-color: #43464d;
+			}
+			#magicaleyes > img {
+				padding: 6px 2px;
+			}
+			#magicaleyes > span {
+				align-self: center;
+				margin-left: 6px;
+				font-size: 16px;
+				font-family: "Whitney", sans-serif;
+
+				height: 20px;
+				line-height: 19px;
+			}
+
+			.appear {
+				opacity: 0;
+				animation: appear 1s ease-out 350ms forwards;
+			}
+			@keyframes appear {
+				from {
+					opacity: 0;
+					transform: translateY(-10px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			#message {
+				width: 700px;
+				margin: auto;
+				margin-top: 32px;
+				display: flex;
+			}
+			#left-column {
+				width: 72px;
+				text-align: center;
+
+				padding-top: 4px;
+			}
+			#left-column > img {
+				border-radius: 50%;
+			}
+			#meta {
+				text-align: left;
+				white-space: initial;
+			}
+			#username {
+				color: #eac645;
+				margin-right: 4px;
+			}
+			#date {
+				margin-left: 4px;
+				color: rgb(163, 166, 170);
+				font-size: 12px;
+			}
+			#roleicon {
+				transform: translateY(20%);
+			}
+
+			ol {
+				margin: 0;
+			}
+
+			.mod-image {
+				background-image: url(menublank.png);
+				background-size: 400px 225px;
+				width: 400px;
+				height: 225px;
+				margin-top: 8px;
+				border-radius: 3px;
+
+				font-family: IsaacGame;
+
+				text-align: left;
+
+				padding: 12px 114px;
+
+				box-sizing: border-box;
+
+				white-space: nowrap;
+				letter-spacing: -0.7px;
+
+				text-rendering: optimizeLegibility;
+
+				display: none;
+			}
+
+			li {
+				margin-top: 5px;
+			}
+
+			.flashing {
+				animation: flash;
+				animation-iteration-count: infinite;
+				animation-duration: 1.5s;
+				animation-direction: alternate;
+			}
+
+			@keyframes flash {
+				from {
+					color: #0066cc;
+				}
+				to {
+					color: #e04f4f;
+				}
+			}
+
+			a {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+
+			#skull-reaction {
+				margin-left: 2px;
+				text-align: left;
+				width: 45px;
+				height: 26px;
+				margin-top: 4px;
+
+				/* display: flex; */
+				display: none;
+				justify-content: space-around;
+				align-items: center;
+
+				border-radius: 8px;
+				color: white;
+				background-color: #2f3136;
+			}
+			#skull-reaction > img {
+				padding: 6px;
+			}
+			#skull-counter {
+				color: #b9bbbe;
+				font-size: 14px;
+				width: 2ch;
+			}
+
+			@media screen and (max-width: 510px) {
+				#message {
+					flex-direction: column;
+				}
+				.mod-image {
+					background-size: 100% 225px;
+					width: 100%;
+					padding-left: 29%;
+				}
+				#message-body {
+					width: 100%;
+					padding: 10px;
+					box-sizing: border-box;
+				}
+				#message {
+					width: auto;
+				}
+			}
+		</style>
 	</head>
 	<body>
-        test
-    </body>
+		<main>
+			<img src="skull.svg" crossorigin="anonymous" width="64" />
+			<div class="appear" id="magicaleyes"><img src="hash.svg" width="20" height="20" /><span>📌-magicaleyes</span></div>
+			<div id="message" style="display: none" class="appear">
+				<div id="left-column">
+					<img src="magical.png" width="40" />
+				</div>
+				<div id="right-column">
+					<div id="meta">
+						<span id="username">ME</span>
+						<img id="roleicon" src="roleicon.jpg" width="20" />
+						<span id="date"> </span>
+					</div>
+					<div id="message-body">
+						<ol class="mod-image appear">
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=836319872" target="_blank">!!~External item descriptions</a>
+							</li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2490515687" target="_blank">!POG for Good Items</a>
+							</li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2635267643" target="_blank">'Enhanced Boss Bars</a></li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2533425541" target="_blank">Angel Shop Beggar Fix</a></li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2623638283" target="_blank">Animated Beggars</a></li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2508834844" target="_blank">Better Monstrance Aura</a>
+							</li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2492654252" target="_blank">Boss Rush Wave Counter [Rep | AB+]</a>
+							</li>
+							<li>
+								<a class="flashing" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2489813335" target="_blank">Classic Music Antibirth Edition</a>
+							</li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2489635144" target="_blank">Custom Mr Dollys</a></li>
+						</ol>
+						<ol start="10" class="mod-image appear">
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2729900570" target="_blank">Damage Multiplier Stat</a>
+							</li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2489006943" target="_blank">Planetarium Chance</a>
+							</li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2575911103" target="_blank">The Specialist for Good Items</a>
+							</li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2617557401" target="_blank">TimeMachine</a></li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2493551842" target="_blank">Ugh for Bad Items</a></li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2690434875" target="_blank">Unique Birthrights</a>
+							</li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2563988750" target="_blank">Unique Isaac Boss Fight</a>
+							</li>
+							<li>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2622566172" target="_blank">Visible Challenge Unlocks</a>
+							</li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2491837386" target="_blank">balls</a></li>
+						</ol>
+						<ol start="19" class="mod-image appear">
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2655137834" target="_blank">cute incubus</a></li>
+							<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2675247553" target="_blank">new load transitions</a></li>
+						</ol>
+					</div>
+					<div id="skull-reaction">
+						<img src="skull.svg" width="16px" />
+						<div id="skull-counter">7</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script>
+		document.getElementById("date").innerText = new Date(2022, 1, 22).toLocaleDateString();
+		document.getElementById("meta").childNodes.forEach((el) => {
+			if (el instanceof Text) el.remove();
+		});
+
+		document.getElementById("magicaleyes").addEventListener("click", () => {
+			document.getElementById("magicaleyes").classList.add("active");
+			document.getElementById("message").style.display = "flex";
+
+			let timeout = 25;
+			[...document.getElementsByClassName("mod-image")].forEach((el, i) => {
+				setTimeout(() => {
+					el.style.display = "block";
+				}, timeout * (i + 1));
+			});
+
+			setTimeout(() => {
+				const el = document.getElementById("skull-reaction");
+				el.style.display = "flex";
+				document.getElementById("skull-reaction").classList.add("appear");
+			}, 2000);
+		});
+	</script>
 </html>
